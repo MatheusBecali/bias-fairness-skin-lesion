@@ -216,3 +216,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# AI Agents
+.agents/
+.claude/
+.codex
+AGENTS.md
+
+# Folds
+results/
+backup/
+latex/
+plots/
+debiased/
+model/
+
+# Local Files
+*.pth
+
