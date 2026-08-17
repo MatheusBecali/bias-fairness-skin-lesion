@@ -86,6 +86,45 @@ pip install -r requirements.txt
 python main.py --help
 ```
 
+
+## Project Structure
+
+```
+.
+├── main.py                          # Main experiment pipeline
+├── run_optuna.py                    # Hyperparameter optimization script
+├── aggregate_results.py             # Aggregates results across runs
+├── atopsis_analysis.py              # TOPSIS multi-criteria analysis
+├── generate_decision_making_csv.py  # Generates decision matrices
+├── resultsLatex.py                  # Generates LaTeX tables
+├── requirements.txt                 # Python dependencies
+├── enviroments.yml                  # Conda environment file
+├── data/                            # Datasets (input)
+│   ├── db-pad-ufes-20/
+│   ├── db-hiba/
+│   └── db-midas/
+├── model/                           # Trained models (output)
+├── results/                         # CSV results from experiments
+├── debiased/                        # Debiased data from preprocessing
+├── plots/                           # Generated visualization plots
+├── latex/                           # Generated LaTeX tables
+├── src/
+│   ├── net.py                       # Neural network architectures
+│   └── vae.py                       # VAE implementation
+└── utils/
+    └── helpers.py                   # Utility functions
+```
+
+## Outputs
+
+Each experiment generates:
+
+- **CSV Results**: Per-fold performance and fairness metrics in `results/`
+- **Trained Models**: Serialized models in `model/`
+- **Debiased Data**: Preprocessed/debiased datasets in `debiased/`
+- **Visualizations**: Plots comparing fairness vs accuracy in `plots/`
+- **LaTeX Tables**: Publication-ready tables in `latex/`
+
 ## Usage
 
 ### Basic Usage
@@ -127,43 +166,16 @@ python main.py --dataset db-midas --mitigation PP --classify mlp
 | `IP` | In + Post-processing | Adversarial VAE + MLDebiaser |
 | `PIP` | Full pipeline | DEMV + Adversarial VAE + MLDebiaser |
 
-## Project Structure
 
-```
-.
-├── main.py                          # Main experiment pipeline
-├── run_optuna.py                    # Hyperparameter optimization script
-├── aggregate_results.py             # Aggregates results across runs
-├── atopsis_analysis.py              # TOPSIS multi-criteria analysis
-├── generate_decision_making_csv.py  # Generates decision matrices
-├── resultsLatex.py                  # Generates LaTeX tables
-├── requirements.txt                 # Python dependencies
-├── enviroments.yml                  # Conda environment file
-├── data/                            # Datasets (input)
-│   ├── db-pad-ufes-20/
-│   ├── db-hiba/
-│   └── db-midas/
-├── model/                           # Trained models (output)
-├── results/                         # CSV results from experiments
-├── debiased/                        # Debiased data from preprocessing
-├── plots/                           # Generated visualization plots
-├── latex/                           # Generated LaTeX tables
-├── src/
-│   ├── net.py                       # Neural network architectures
-│   └── vae.py                       # VAE implementation
-└── utils/
-    └── helpers.py                   # Utility functions
-```
+## Reproducibility
 
-## Outputs
+All experiments use a fixed random seed (`_seed = 78645`) to ensure reproducibility. CUDA device selection is automatic if available, falling back to CPU otherwise.
 
-Each experiment generates:
-
-- **CSV Results**: Per-fold performance and fairness metrics in `results/`
-- **Trained Models**: Serialized models in `model/`
-- **Debiased Data**: Preprocessed/debiased datasets in `debiased/`
-- **Visualizations**: Plots comparing fairness vs accuracy in `plots/`
-- **LaTeX Tables**: Publication-ready tables in `latex/`
+To ensure reproducibility:
+1. Use the same Python and PyTorch versions (see `requirements.txt`)
+2. Run on the same hardware or set explicit GPU/CPU configuration
+3. Use provided hyperparameters or regenerate via `run_optuna.py`
+4. Run the script `run_all.sh`
 
 ## Scripts
 
@@ -209,16 +221,6 @@ If you use this code in your research, please cite:
 } 
 ```
 -->
-
-## Reproducibility
-
-All experiments use a fixed random seed (`_seed = 78645`) to ensure reproducibility. CUDA device selection is automatic if available, falling back to CPU otherwise.
-
-To ensure reproducibility:
-1. Use the same Python and PyTorch versions (see `requirements.txt`)
-2. Run on the same hardware or set explicit GPU/CPU configuration
-3. Use provided hyperparameters or regenerate via `run_optuna.py`
-4. Run the script `run_all.sh`
 
 ## License
 
