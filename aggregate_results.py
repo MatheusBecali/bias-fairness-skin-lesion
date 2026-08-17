@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Aggregate per-fold results into mean +/- standard deviation.
 

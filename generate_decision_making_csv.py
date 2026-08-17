@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Create decision-making CSV summaries (avg/std) from aggregated classifier results.
 

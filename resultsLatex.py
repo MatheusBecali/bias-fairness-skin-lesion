@@ -16,6 +16,7 @@ Email: matheusbecali@gmail.com
 """
 
 import argparse
+import os
 
 import pandas as pd
 
@@ -492,7 +493,9 @@ def process_multiclass_csv(dataset_name="db-pad-ufes-20"):
     print(fairness_table)
 
     output_file_perf = f"./latex/latex_tables_{dataset_name}_perf_multiclassifier.tex"
+    os.makedirs(os.path.dirname(output_file_perf), exist_ok=True)
     output_file_fair = f"./latex/latex_tables_{dataset_name}_multiclassifier.tex"
+    os.makedirs(os.path.dirname(output_file_fair), exist_ok=True)
     with open(output_file_perf, 'w', encoding='utf-8') as f:
         f.write(performance_table)
     with open(output_file_fair, 'w', encoding='utf-8') as f:
