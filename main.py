@@ -1187,7 +1187,7 @@ def main(_dataset_name = "db-pad-ufes-20", _num_epochs_vae=20000, _early_stop_pa
     # MLP arguments
     _k_folds = 5
     _set_loss = "weighted_cross_entropy_loss"
-    epochs_mlp = 2 # 2000
+    epochs_mlp = 2000
     ######################################################################################
 
     # Binarizes the Fitzpatrick scale from [0,1,2,3,4,5] down to [0,1]
@@ -1788,7 +1788,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--num_epochs_vae",
         type=int,
-        default= 2, #20000,
+        default= 20000,
         help="Number of epochs used to train the VAE"
     )
 
