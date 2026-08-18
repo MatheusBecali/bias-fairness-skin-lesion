@@ -16,7 +16,7 @@ This repository contains the implementation of a comprehensive bias mitigation p
 
 - **Multi-stage debiasing framework**: Combines pre-processing (DEMV), in-processing (adversarial VAE), and post-processing (MLDebiaser) techniques
 - **Comprehensive evaluation**: Assesses fairness metrics (statistical parity, equalized odds, equal opportunity) alongside accuracy metrics
-- **Multiple datasets**: Experiments on diverse skin lesion classification datasets (DB-PAD, DB-HIBA, DB-MIDAS)
+- **Multiple datasets**: Experiments on diverse skin lesion classification datasets (DB-PAD-UFES-20, DB-HIBA, DB-MIDAS)
 - **Flexible architecture**: Supports multiple classifiers (MLP, KNN, Decision Trees) and mitigation combinations
 
 ## Features
@@ -28,8 +28,7 @@ This repository contains the implementation of a comprehensive bias mitigation p
   - Combinable strategies: Pre, In, Post, Pre+In, Pre+Post, In+Post, Pre+In+Post
 
 - **Performance Metrics**:
-  - Accuracy, Balanced Accuracy
-  - Precision, Recall, F1-Score
+  - Accuracy, Balanced Accuracy, Precision, Recall, F1-Score
   - Per-fold and aggregated results
 
 - **Fairness Metrics**:
