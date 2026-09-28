@@ -6,9 +6,11 @@ Official code for the paper *"The Impact of Bias Mitigation on Fairness and Accu
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
-<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+<!-- [![DOI](https://zenodo.org/badge/DOI/10.1007/s41666-026-00252-w.svg)](https://doi.org/10.1007/s41666-026-00252-w) -->
 
-> **Status:** Under review at *Journal of Healthcare Informatics Research*. The paper link and DOI will be added here once published.
+_**Springer Paper:**_ \
+**Title:** The Impact of Bias Mitigation on Fairness and Accuracy in Automated Skin Lesion Classification (Language: English) \
+Link to the paper: [https://link.springer.com/article/10.1007/s41666-026-00252-w](https://link.springer.com/article/10.1007/s41666-026-00252-w)
 
 ## Overview
 
@@ -211,17 +213,22 @@ python resultsLatex.py
 ## Citation
 
 If you use this code in your research, please cite:
-<!--
+
 ```bibtex
- @article{becali2026bias,
+@Article{Rocha2026,
+  author={Rocha, Matheus B.
+  and Krohling, Renato A.},
   title={The Impact of Bias Mitigation on Fairness and Accuracy in Automated Skin Lesion Classification},
-  author={Becali, Matheus and ...},
   journal={Journal of Healthcare Informatics Research},
   year={2026},
-  note={Under review}
-} 
+  month={Sep},
+  day={26},
+  issn={2509-498X},
+  doi={10.1007/s41666-026-00252-w},
+  url={https://doi.org/10.1007/s41666-026-00252-w}
+}
 ```
--->
+
 
 ## Contributing
 
